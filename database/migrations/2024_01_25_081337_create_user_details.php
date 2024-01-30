@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreignKey('user_id')->references('id')->on('users');
-            $table->string('nombre');
-            $table->string('email');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('direccion');
+            $table->string('telefono');
             $table->timestamps();
         });
     }

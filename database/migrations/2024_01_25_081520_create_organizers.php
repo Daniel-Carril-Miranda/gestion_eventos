@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('organizers', function (Blueprint $table) {
             $table->id();
+            $table->String('nombre');
+            $table->String('contacto');
             $table->timestamps();
         });
     }
